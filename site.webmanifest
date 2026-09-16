@@ -1,0 +1,63 @@
+{
+  "name": "I Love Burger — Премиум бургеры в Жалал-Абаде",
+  "short_name": "I Love Burger",
+  "description": "Премиум-кафе в Жалал-Абаде. Бургеры, турецкая и европейская кухня. 100% халяль. Доставка за 30 минут.",
+  "start_url": "/",
+  "scope": "/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#0d0d0f",
+  "theme_color": "#0d0d0f",
+  "lang": "ru-KG",
+  "dir": "ltr",
+  "categories": ["food", "restaurant", "shopping"],
+  "icons": [
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/web-app-manifest-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "maskable"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "/web-app-manifest-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Меню",
+      "short_name": "Меню",
+      "description": "Открыть меню I Love Burger",
+      "url": "/#menu",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96", "type": "image/png" }]
+    },
+    {
+      "name": "Заказать в WhatsApp",
+      "short_name": "WhatsApp",
+      "description": "Быстрый заказ через WhatsApp",
+      "url": "https://api.whatsapp.com/send/?phone=996501909909",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96", "type": "image/png" }]
+    },
+    {
+      "name": "Контакты",
+      "short_name": "Контакты",
+      "description": "Адрес и телефоны",
+      "url": "/#contacts",
+      "icons": [{ "src": "/favicon-96x96.png", "sizes": "96x96", "type": "image/png" }]
+    }
+  ]
+}

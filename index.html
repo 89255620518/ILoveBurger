@@ -1,0 +1,1283 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>I Love Burger — Премиум бургеры в Жалал-Абаде | Халяль | Доставка</title>
+<meta name="description" content="I Love Burger — премиум-кафе в Жалал-Абаде. Бургеры, турецкая и европейская кухня. Халяль. Адрес: г. Манас, ул. Тумонбая Байзакова 63. Тел: +996 990 14 21 23. Доставка через приложение.">
+<meta name="keywords" content="I Love Burger, бургеры Жалал-Абад, доставка еды Жалал-Абад, халяль кафе Кыргызстан, бургерная Манас, турецкая кухня Жалал-Абад">
+<meta name="robots" content="index, follow">
+<meta name="author" content="I Love Burger">
+<meta name="theme-color" content="#0d0d0f">
+<link rel="canonical" href="https://iloveburger.kg/">
+
+<!-- Open Graph -->
+<meta property="og:type" content="restaurant">
+<meta property="og:title" content="I Love Burger — Премиум бургеры в Жалал-Абаде">
+<meta property="og:description" content="Халяль. Турецкая и европейская кухня. Доставка через приложение.">
+<meta property="og:image" content="https://iloveburger.kg/og-image.jpg">
+<meta property="og:url" content="https://iloveburger.kg/">
+<meta property="og:locale" content="ru_KG">
+<meta property="og:site_name" content="I Love Burger">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="I Love Burger — Премиум бургеры в Жалал-Абаде">
+<meta name="twitter:description" content="Халяль. Турецкая и европейская кухня.">
+<meta name="twitter:image" content="https://iloveburger.kg/og-image.jpg">
+
+<!-- Schema.org Restaurant -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "I Love Burger",
+  "image": "https://iloveburger.kg/og-image.jpg",
+  "url": "https://iloveburger.kg/",
+  "telephone": ["+996990142123", "+996551909909"],
+  "priceRange": "$$",
+  "servesCuisine": ["Turkish", "European", "Burgers", "Halal"],
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "ул. Тумонбая Байзакова 63",
+    "addressLocality": "Манас",
+    "addressRegion": "Жалал-Абад",
+    "addressCountry": "KG"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": "40.9333",
+    "longitude": "73.0000"
+  },
+  "openingHoursSpecification": [{
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+    "opens": "10:00",
+    "closes": "23:00"
+  }],
+  "acceptsReservations": "False",
+  "hasMenu": "https://iloveburger.kg/#menu",
+  "sameAs": [
+    "https://www.instagram.com/iloveburger_kg",
+    "https://api.whatsapp.com/send/?phone=996501909909"
+  ]
+}
+</script>
+
+<!-- Schema.org Menu -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "I Love Burger Menu",
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "name": "Бургеры",
+      "hasMenuItem": [
+        {"@type": "MenuItem", "name": "I Love Burger", "offers": {"@type": "Offer", "price": "350", "priceCurrency": "KGS"}},
+        {"@type": "MenuItem", "name": "Cheese Burger", "offers": {"@type": "Offer", "price": "290", "priceCurrency": "KGS"}}
+      ]
+    }
+  ]
+}
+</script>
+
+<style>
+/* ============================================================
+   ПЕРЕМЕННЫЕ
+   ============================================================ */
+:root{
+  --bg:#0d0d0f;
+  --surface:#16161a;
+  --surface-2:#1e1e24;
+  --border:#2a2a33;
+  --text:#f5f5f7;
+  --muted:#9a9aa5;
+  --accent:#ff3b30;
+  --accent-2:#ffb800;
+  --whatsapp:#25d366;
+  --instagram:#e1306c;
+  --radius:18px;
+
+  --container-max: 1800px;
+  --container-pad: clamp(16px, 3vw, 48px);
+  --section-py: clamp(48px, 7vw, 120px);
+
+  --fs-h1: clamp(34px, 5.5vw, 88px);
+  --fs-h2: clamp(26px, 3.5vw, 56px);
+  --fs-h3: clamp(16px, 1.2vw, 22px);
+  --fs-body: clamp(15px, 1vw, 18px);
+  --fs-small: clamp(13px, 0.85vw, 15px);
+}
+
+/* ============================================================
+   RESET
+   ============================================================ */
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{
+  font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+  background:var(--bg);color:var(--text);line-height:1.6;
+  -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
+  padding-top:clamp(80px, 8vw, 110px);
+}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:none;background:none;color:inherit}
+input{font-family:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+
+/* ============================================================
+   КОНТЕЙНЕР
+   ============================================================ */
+.container{
+  width:100%;
+  max-width:var(--container-max);
+  margin:0 auto;
+  padding-left:var(--container-pad);
+  padding-right:var(--container-pad);
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.header{
+  position:fixed;
+  top:clamp(10px, 1.5vw, 20px);
+  left:50%;
+  transform:translateX(-50%);
+  z-index:100;
+  width:calc(100% - clamp(20px, 4vw, 64px));
+  max-width:var(--container-max);
+  border-radius:100px;
+  background:rgba(13,13,15,.72);
+  backdrop-filter:blur(24px) saturate(180%);
+  -webkit-backdrop-filter:blur(24px) saturate(180%);
+  border:1px solid rgba(255,255,255,.06);
+  box-shadow:
+    0 4px 24px rgba(0,0,0,.25),
+    0 1px 0 rgba(255,255,255,.04) inset;
+  transition:background .3s, box-shadow .3s, border-color .3s;
+}
+.header.scrolled{
+  background:rgba(13,13,15,.88);
+  box-shadow:
+    0 8px 40px rgba(0,0,0,.45),
+    0 1px 0 rgba(255,255,255,.06) inset;
+  border-color:rgba(255,255,255,.08);
+}
+.header-inner{
+  display:flex;align-items:center;justify-content:space-between;
+  padding:clamp(10px,1vw,16px) clamp(16px,1.8vw,28px);
+  gap:20px;
+}
+.logo{
+  font-size:clamp(20px,1.6vw,26px);font-weight:800;
+  letter-spacing:-.5px;white-space:nowrap;
+}
+.logo span{color:var(--accent)}
+.nav{display:flex;gap:clamp(16px,2vw,36px)}
+.nav a{font-size:var(--fs-small);color:var(--muted);transition:color .2s}
+.nav a:hover{color:var(--text)}
+.header-actions{display:flex;gap:10px;align-items:center}
+.icon-btn{
+  width:clamp(38px,3vw,46px);height:clamp(38px,3vw,46px);
+  border-radius:50%;
+  background:rgba(255,255,255,.04);
+  border:1px solid rgba(255,255,255,.06);
+  display:flex;align-items:center;justify-content:center;
+  position:relative;transition:background .2s,transform .2s,color .2s;
+  font-size:clamp(16px,1.2vw,20px);
+  color:var(--text);
+}
+.icon-btn:hover{background:rgba(255,255,255,.1);transform:scale(1.05)}
+.icon-btn.wa:hover{background:var(--whatsapp);color:#fff;border-color:var(--whatsapp)}
+.icon-btn.ig:hover{background:var(--instagram);color:#fff;border-color:var(--instagram)}
+.badge{
+  position:absolute;top:-4px;right:-4px;
+  background:var(--accent);color:#fff;font-size:11px;font-weight:700;
+  min-width:18px;height:18px;border-radius:9px;
+  display:flex;align-items:center;justify-content:center;padding:0 5px;
+}
+.burger-menu{
+  display:none;flex-direction:column;gap:5px;
+  width:clamp(38px,3vw,46px);height:clamp(38px,3vw,46px);
+  align-items:center;justify-content:center;
+}
+.burger-menu span{width:22px;height:2px;background:var(--text);border-radius:2px;transition:.3s}
+
+/* ============================================================
+   SVG-ИКОНКИ
+   ============================================================ */
+.icon-svg{
+  width:clamp(18px,1.4vw,22px);
+  height:clamp(18px,1.4vw,22px);
+  fill:currentColor;
+  display:block;
+  flex-shrink:0;
+}
+.btn .icon-svg{
+  width:18px;height:18px;
+  fill:currentColor;
+}
+.store-btn .icon-svg{
+  width:clamp(24px,2vw,32px);
+  height:clamp(24px,2vw,32px);
+  fill:#fff;
+}
+.contact-icon .icon-svg{
+  width:clamp(20px,1.6vw,24px);
+  height:clamp(20px,1.6vw,24px);
+  fill:currentColor;
+}
+.footer .socials .icon-svg{
+  width:clamp(18px,1.4vw,22px);
+  height:clamp(18px,1.4vw,22px);
+  fill:currentColor;
+}
+.hero-contacts .icon-svg{
+  width:16px;height:16px;
+  fill:currentColor;
+  display:inline-block;
+  vertical-align:middle;
+}
+
+/* ============================================================
+   HERO
+   ============================================================ */
+.hero{
+  position:relative;
+  padding:clamp(40px,5vw,80px) 0 clamp(50px,7vw,120px);
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at top right,rgba(255,59,48,.15),transparent 55%),
+    radial-gradient(ellipse at bottom left,rgba(255,184,0,.08),transparent 55%);
+}
+.hero-grid{
+  display:grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap:clamp(32px,5vw,100px);
+  align-items:center;
+}
+.hero-badge{
+  display:inline-flex;align-items:center;gap:8px;
+  background:var(--surface);border:1px solid var(--border);
+  padding:8px 16px;border-radius:100px;font-size:var(--fs-small);
+  color:var(--muted);margin-bottom:clamp(16px,2vw,28px);
+}
+.hero-badge .dot{width:8px;height:8px;border-radius:50%;background:#22c55e;animation:pulse 2s infinite}
+@keyframes pulse{0%,100%{opacity:1}50%{opacity:.4}}
+.hero h1{
+  font-size:var(--fs-h1);font-weight:900;line-height:1.02;
+  letter-spacing:-2px;margin-bottom:clamp(14px,1.6vw,24px);
+}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p{
+  font-size:var(--fs-body);
+  color:var(--muted);
+  margin-bottom:clamp(24px,2.5vw,36px);
+  max-width:min(640px,100%);
+}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-bottom:clamp(24px,2.5vw,36px)}
+.btn{
+  display:inline-flex;align-items:center;gap:10px;
+  padding:clamp(12px,1.1vw,16px) clamp(20px,1.8vw,30px);
+  border-radius:100px;font-size:var(--fs-small);font-weight:600;
+  transition:transform .2s,background .2s,box-shadow .2s;
+  white-space:nowrap;
+}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--accent);color:#fff;box-shadow:0 8px 24px rgba(255,59,48,.3)}
+.btn-primary:hover{background:#e6352b;box-shadow:0 12px 32px rgba(255,59,48,.4)}
+.btn-outline{background:transparent;border:1px solid var(--border);color:var(--text)}
+.btn-outline:hover{background:var(--surface)}
+.btn-wa{background:var(--whatsapp);color:#fff;box-shadow:0 8px 24px rgba(37,211,102,.3)}
+.btn-wa:hover{background:#1ebe5a;box-shadow:0 12px 32px rgba(37,211,102,.4)}
+.hero-contacts{
+  display:flex;gap:clamp(16px,2vw,32px);flex-wrap:wrap;
+  font-size:var(--fs-small);color:var(--muted);
+}
+.hero-contacts a{display:flex;align-items:center;gap:8px;transition:color .2s}
+.hero-contacts a:hover{color:var(--text)}
+.hero-visual{
+  position:relative;
+  aspect-ratio:1;
+  border-radius:clamp(20px,2.5vw,40px);
+  overflow:hidden;
+  background:linear-gradient(135deg,var(--surface),var(--surface-2));
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(80px,12vw,200px);
+  border:1px solid var(--border);
+}
+.hero-visual::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 30% 30%,rgba(255,59,48,.2),transparent 50%);
+}
+.hero-visual .emoji{position:relative;z-index:1;animation:float 4s ease-in-out infinite}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-16px)}}
+
+/* ============================================================
+   FEATURES
+   ============================================================ */
+.features{
+  padding:clamp(40px,5vw,80px) 0;
+  border-top:1px solid var(--border);
+}
+.features-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:clamp(14px,1.5vw,24px);
+}
+.feature{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);
+  padding:clamp(20px,2vw,32px);
+  transition:border-color .2s,transform .2s;
+}
+.feature:hover{border-color:var(--accent);transform:translateY(-2px)}
+.feature-icon{font-size:clamp(24px,2vw,32px);margin-bottom:12px}
+.feature h3{font-size:var(--fs-h3);margin-bottom:6px}
+.feature p{font-size:var(--fs-small);color:var(--muted)}
+
+/* ============================================================
+   MENU
+   ============================================================ */
+.menu-section{padding:var(--section-py) 0}
+.section-head{text-align:center;margin-bottom:clamp(32px,4vw,64px)}
+.section-head h2{
+  font-size:var(--fs-h2);font-weight:800;letter-spacing:-1px;
+  margin-bottom:12px;
+}
+.section-head p{color:var(--muted);font-size:var(--fs-body)}
+
+/* Поиск */
+.menu-search{
+  max-width:640px;
+  margin:0 auto clamp(20px,2.5vw,32px);
+  position:relative;
+}
+.menu-search-input{
+  width:100%;
+  padding:clamp(14px,1.4vw,18px) clamp(48px,4vw,56px) clamp(14px,1.4vw,18px) clamp(48px,4vw,56px);
+  border-radius:100px;
+  background:var(--surface);
+  border:1px solid var(--border);
+  color:var(--text);
+  font-size:var(--fs-body);
+  transition:border-color .2s, background .2s, box-shadow .2s;
+}
+.menu-search-input::placeholder{color:var(--muted)}
+.menu-search-input:focus{
+  outline:none;
+  border-color:var(--accent);
+  background:var(--surface-2);
+  box-shadow:0 0 0 4px rgba(255,59,48,.12);
+}
+.menu-search-icon{
+  position:absolute;
+  left:clamp(16px,1.6vw,22px);
+  top:50%;
+  transform:translateY(-50%);
+  width:clamp(18px,1.4vw,22px);
+  height:clamp(18px,1.4vw,22px);
+  fill:var(--muted);
+  pointer-events:none;
+  transition:fill .2s;
+}
+.menu-search-input:focus + .menu-search-icon,
+.menu-search:focus-within .menu-search-icon{fill:var(--accent)}
+.menu-search-clear{
+  position:absolute;
+  right:clamp(12px,1.2vw,18px);
+  top:50%;
+  transform:translateY(-50%);
+  width:clamp(28px,2.2vw,34px);
+  height:clamp(28px,2.2vw,34px);
+  border-radius:50%;
+  background:var(--surface-2);
+  border:1px solid var(--border);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  font-size:clamp(14px,1.1vw,16px);
+  color:var(--muted);
+  transition:background .2s, color .2s, transform .2s;
+}
+.menu-search-clear:hover{background:var(--accent);color:#fff;border-color:var(--accent);transform:translateY(-50%) scale(1.08)}
+.menu-search-clear.visible{display:flex}
+
+.menu-empty{
+  grid-column:1/-1;
+  text-align:center;
+  padding:clamp(40px,5vw,80px) 20px;
+  color:var(--muted);
+  font-size:var(--fs-body);
+}
+.menu-empty strong{display:block;font-size:clamp(20px,2vw,28px);color:var(--text);margin-bottom:8px;font-weight:700}
+
+.menu-tabs{
+  display:flex;gap:8px;justify-content:center;flex-wrap:wrap;
+  margin-bottom:clamp(24px,3vw,44px);
+}
+.tab{
+  padding:clamp(8px,0.8vw,12px) clamp(16px,1.4vw,24px);
+  border-radius:100px;font-size:var(--fs-small);font-weight:500;
+  background:var(--surface);border:1px solid var(--border);color:var(--muted);
+  transition:all .2s;white-space:nowrap;
+}
+.tab:hover{color:var(--text)}
+.tab.active{background:var(--accent);color:#fff;border-color:var(--accent)}
+
+.menu-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fill,minmax(260px,1fr));
+  gap:clamp(14px,1.5vw,24px);
+}
+@media(min-width:1400px){
+  .menu-grid{grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+}
+
+.menu-card{
+  background:var(--surface);border:1px solid var(--border);
+  border-radius:var(--radius);
+  overflow:hidden;
+  transition:transform .2s,border-color .2s;
+  position:relative;
+  display:flex;flex-direction:column;
+}
+.menu-card:hover{transform:translateY(-4px);border-color:var(--accent)}
+.menu-card-img{
+  aspect-ratio:4/3;
+  background:linear-gradient(135deg,var(--surface-2),var(--surface));
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(48px,5vw,80px);
+  position:relative;
+}
+.menu-card-tag{
+  position:absolute;top:12px;left:12px;
+  background:var(--accent);color:#fff;
+  font-size:11px;font-weight:700;
+  padding:4px 10px;border-radius:100px;
+  text-transform:uppercase;letter-spacing:.5px;
+}
+.menu-card-tag.halal{background:#22c55e}
+.menu-card-body{
+  padding:clamp(14px,1.3vw,22px);
+  display:flex;flex-direction:column;flex:1;
+}
+.menu-card-body h3{font-size:var(--fs-h3);margin-bottom:6px;font-weight:700}
+.menu-card-body p{
+  font-size:var(--fs-small);color:var(--muted);
+  margin-bottom:14px;flex:1;
+}
+.menu-card-footer{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;
+  margin-top:auto;
+}
+.menu-card-price{
+  font-size:clamp(16px,1.3vw,20px);
+  font-weight:800;
+}
+.menu-card-price small{font-size:12px;color:var(--muted);font-weight:400}
+.add-btn{
+  width:clamp(38px,3vw,46px);height:clamp(38px,3vw,46px);
+  border-radius:50%;background:var(--accent);color:#fff;
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(20px,1.8vw,26px);
+  transition:transform .2s,background .2s;
+  flex-shrink:0;
+}
+.add-btn:hover{background:#e6352b;transform:scale(1.1)}
+.fav-btn{
+  position:absolute;top:12px;right:12px;
+  width:clamp(32px,2.5vw,38px);height:clamp(32px,2.5vw,38px);
+  border-radius:50%;
+  background:rgba(0,0,0,.5);backdrop-filter:blur(8px);
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(14px,1.1vw,18px);
+  transition:transform .2s;
+}
+.fav-btn:hover{transform:scale(1.1)}
+.fav-btn.active{color:var(--accent)}
+
+/* Подсветка найденного */
+.menu-card mark{
+  background:rgba(255,184,0,.35);
+  color:var(--text);
+  padding:0 2px;
+  border-radius:3px;
+}
+
+/* ============================================================
+   APP CTA
+   ============================================================ */
+.app-cta{
+  padding:var(--section-py) 0;
+  background:linear-gradient(135deg,var(--surface),var(--surface-2));
+  border-top:1px solid var(--border);border-bottom:1px solid var(--border);
+}
+.app-cta-inner{
+  display:grid;
+  grid-template-columns:1.1fr 1fr;
+  gap:clamp(32px,5vw,100px);
+  align-items:center;
+}
+.app-cta h2{
+  font-size:var(--fs-h2);font-weight:800;letter-spacing:-1px;
+  margin-bottom:16px;
+}
+.app-cta p{color:var(--muted);margin-bottom:clamp(20px,2.5vw,32px);font-size:var(--fs-body)}
+.store-buttons{display:flex;gap:12px;flex-wrap:wrap}
+.store-btn{
+  display:flex;align-items:center;gap:12px;
+  background:#000;border:1px solid var(--border);
+  border-radius:14px;
+  padding:clamp(10px,1vw,14px) clamp(16px,1.5vw,24px);
+  transition:transform .2s,border-color .2s,background .2s;
+  color:#fff;
+}
+.store-btn:hover{transform:translateY(-2px);border-color:var(--accent)}
+.store-btn.wa{background:var(--whatsapp);border-color:var(--whatsapp)}
+.store-btn.wa:hover{background:#1ebe5a;border-color:#1ebe5a}
+.store-btn.ig{background:linear-gradient(135deg,#f09433,#e6683c,#dc2743,#cc2366,#bc1888);border-color:transparent}
+.store-btn.ig:hover{filter:brightness(1.1);border-color:transparent}
+.store-btn .store-text{display:flex;flex-direction:column;line-height:1.2}
+.store-btn .store-text small{
+  font-size:11px;color:rgba(255,255,255,.75);
+  text-transform:uppercase;letter-spacing:.5px;
+}
+.store-btn .store-text strong{font-size:clamp(14px,1.1vw,17px)}
+.app-visual{
+  aspect-ratio:1;
+  border-radius:clamp(20px,2.5vw,40px);
+  background:var(--bg);
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(80px,12vw,220px);
+  position:relative;overflow:hidden;
+}
+.app-visual::before{
+  content:"";position:absolute;inset:0;
+  background:radial-gradient(circle at 70% 30%,rgba(255,184,0,.2),transparent 60%);
+}
+
+/* ============================================================
+   CONTACTS + MAP
+   ============================================================ */
+.contacts{padding:var(--section-py) 0}
+.contacts-grid{
+  display:grid;
+  grid-template-columns:1fr 1.6fr;
+  gap:clamp(24px,3vw,48px);
+}
+.contact-info{display:flex;flex-direction:column;gap:clamp(18px,1.8vw,28px)}
+.contact-item{display:flex;gap:16px;align-items:flex-start;color:inherit}
+.contact-icon{
+  width:clamp(40px,3.2vw,52px);height:clamp(40px,3.2vw,52px);
+  border-radius:12px;background:var(--surface);
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(18px,1.5vw,22px);flex-shrink:0;
+  transition:background .2s,border-color .2s,color .2s;
+  color:var(--text);
+}
+.contact-item:hover .contact-icon{
+  background:var(--surface-2);border-color:var(--accent);
+}
+.contact-item:hover .contact-icon.wa-hover{
+  background:var(--whatsapp);color:#fff;border-color:var(--whatsapp);
+}
+.contact-item:hover .contact-icon.ig-hover{
+  background:var(--instagram);color:#fff;border-color:var(--instagram);
+}
+.contact-item h4{
+  font-size:var(--fs-small);color:var(--muted);font-weight:500;
+  text-transform:uppercase;letter-spacing:.5px;margin-bottom:4px;
+}
+.contact-item p, .contact-item a{font-size:var(--fs-body);font-weight:600}
+.contact-item .contact-lines{display:flex;flex-direction:column;gap:4px}
+.contact-item .contact-lines a{transition:color .2s}
+.contact-item .contact-lines a:hover{color:var(--accent)}
+.map-wrapper{
+  border-radius:var(--radius);overflow:hidden;
+  border:1px solid var(--border);
+  min-height:clamp(320px,40vw,560px);
+  background:var(--surface);
+}
+.map-wrapper iframe{width:100%;height:100%;min-height:inherit;border:0;display:block}
+
+/* ============================================================
+   FOOTER
+   ============================================================ */
+.footer{
+  padding:clamp(32px,4vw,56px) 0;
+  border-top:1px solid var(--border);
+  text-align:center;
+}
+.footer p{font-size:var(--fs-small);color:var(--muted)}
+.footer .socials{display:flex;gap:16px;justify-content:center;margin-bottom:20px}
+.footer .socials a{
+  width:clamp(38px,3vw,46px);height:clamp(38px,3vw,46px);
+  border-radius:50%;background:var(--surface);
+  border:1px solid var(--border);
+  display:flex;align-items:center;justify-content:center;
+  transition:background .2s,transform .2s,color .2s;
+  color:var(--text);
+}
+.footer .socials a:hover{transform:translateY(-2px)}
+.footer .socials a.wa:hover{background:var(--whatsapp);color:#fff;border-color:var(--whatsapp)}
+.footer .socials a.ig:hover{background:var(--instagram);color:#fff;border-color:var(--instagram)}
+
+/* ============================================================
+   FAB
+   ============================================================ */
+.fab{
+  position:fixed;
+  bottom:clamp(16px,2vw,32px);
+  right:clamp(16px,2vw,32px);
+  z-index:90;
+  width:clamp(52px,4.5vw,68px);height:clamp(52px,4.5vw,68px);
+  border-radius:50%;background:var(--accent);
+  display:flex;align-items:center;justify-content:center;
+  font-size:clamp(22px,2vw,28px);
+  box-shadow:0 12px 32px rgba(255,59,48,.4);
+  transition:transform .2s;
+  color:#fff;
+}
+.fab:hover{transform:scale(1.1)}
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+.toast{
+  position:fixed;
+  bottom:clamp(80px,8vw,120px);
+  right:clamp(16px,2vw,32px);
+  z-index:200;
+  background:var(--surface-2);border:1px solid var(--border);
+  padding:14px 20px;border-radius:12px;
+  font-size:var(--fs-small);
+  max-width:min(340px,calc(100vw - 32px));
+  transform:translateY(20px);opacity:0;pointer-events:none;
+  transition:all .3s;
+}
+.toast.show{transform:translateY(0);opacity:1}
+
+/* ============================================================
+   АДАПТИВ
+   ============================================================ */
+@media(max-width:1400px){
+  :root{--container-max:1400px}
+}
+@media(max-width:1200px){
+  :root{--container-max:100%}
+}
+@media(max-width:900px){
+  .nav{display:none}
+  .burger-menu{display:flex}
+  .header{
+    top:clamp(8px, 2vw, 14px);
+    width:calc(100% - clamp(16px, 5vw, 32px));
+    border-radius:24px;
+  }
+  .header-inner{
+    padding:clamp(10px,2vw,14px) clamp(14px,3vw,20px);
+  }
+  .hero-grid,
+  .app-cta-inner,
+  .contacts-grid{
+    grid-template-columns:1fr;
+    gap:clamp(28px,4vw,48px);
+  }
+  .features-grid{grid-template-columns:repeat(2,1fr)}
+  .hero-visual{aspect-ratio:16/10;font-size:clamp(80px,15vw,140px)}
+  .app-visual{aspect-ratio:16/10;font-size:clamp(90px,15vw,160px)}
+  .menu-grid{grid-template-columns:repeat(auto-fill,minmax(240px,1fr))}
+}
+@media(max-width:700px){
+  .menu-grid{grid-template-columns:repeat(auto-fill,minmax(200px,1fr))}
+}
+@media(max-width:520px){
+  .header{
+    top:8px;
+    width:calc(100% - 16px);
+    border-radius:20px;
+  }
+  .header-inner{padding:10px 14px}
+  .features-grid{grid-template-columns:1fr}
+  .menu-grid{grid-template-columns:1fr 1fr;gap:12px}
+  .menu-card-body{padding:12px}
+  .menu-card-body h3{font-size:14px}
+  .menu-card-body p{font-size:12px;margin-bottom:8px}
+  .menu-card-price{font-size:15px}
+  .hero-buttons .btn{width:100%;justify-content:center}
+  .store-buttons .store-btn{width:100%;justify-content:center}
+  .contact-info{gap:16px}
+  .contact-item{gap:12px}
+}
+@media(max-width:380px){
+  .menu-grid{grid-template-columns:1fr}
+  .features-grid{grid-template-columns:1fr}
+  :root{--container-pad:14px}
+}
+@media(min-width:2000px){
+  :root{
+    --container-max:1900px;
+    --fs-h1:96px;
+    --fs-h2:64px;
+  }
+  .menu-grid{grid-template-columns:repeat(auto-fill,minmax(320px,1fr))}
+}
+@media(max-height:500px) and (orientation:landscape){
+  .hero{padding:40px 0}
+  .hero-visual{display:none}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:0.01ms !important;
+    animation-iteration-count:1 !important;
+    transition-duration:0.01ms !important;
+    scroll-behavior:auto !important;
+  }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="header" id="siteHeader">
+  <div class="header-inner">
+    <a href="#" class="logo">I <span>♥</span> Burger</a>
+    <nav class="nav">
+      <a href="#menu">Меню</a>
+      <a href="#app">Приложение</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header-actions">
+      <a href="https://api.whatsapp.com/send/?phone=996501909909&text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B8%D0%B7+%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81+%D0%9A%D0%B0%D1%80%D1%82%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9C%D0%B5%D0%BD%D1%8F+%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%BE+%D0%B2%D0%B0%D1%88%D0%B5+%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="icon-btn wa" aria-label="WhatsApp">
+        <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </a>
+      <a href="https://www.instagram.com/iloveburger_kg" target="_blank" rel="noopener" class="icon-btn ig" aria-label="Instagram">
+        <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+      </a>
+      <button class="icon-btn" aria-label="Избранное" id="favBtn">
+        ♡
+        <span class="badge" id="favCount" style="display:none">0</span>
+      </button>
+      <button class="icon-btn" aria-label="Корзина" id="cartBtn">
+        🛒
+        <span class="badge" id="cartCount" style="display:none">0</span>
+      </button>
+      <button class="burger-menu" aria-label="Меню">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <div class="hero-badge">
+        <span class="dot"></span>
+        Открыто сейчас · до 23:00
+      </div>
+      <h1>Премиум бургеры в <em>Жалал-Абаде</em></h1>
+      <p>Халяль. Турецкая и европейская кухня. Доставка через приложение или WhatsApp за 30 минут.</p>
+      <div class="hero-buttons">
+        <a href="#app" class="btn btn-primary">📱 Скачать приложение</a>
+        <a href="https://api.whatsapp.com/send/?phone=996501909909&text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B8%D0%B7+%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81+%D0%9A%D0%B0%D1%80%D1%82%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9C%D0%B5%D0%BD%D1%8F+%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%BE+%D0%B2%D0%B0%D1%88%D0%B5+%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="btn btn-wa">
+          <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          Заказать в WhatsApp
+        </a>
+        <a href="#menu" class="btn btn-outline">Смотреть меню</a>
+      </div>
+      <div class="hero-contacts">
+        <a href="tel:+996990142123">
+          <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+          </svg>
+          +996 990 14 21 23
+        </a>
+        <a href="#contacts">
+          <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/>
+          </svg>
+          г. Манас, ул. Тумонбая Байзакова 63
+        </a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <span class="emoji">🍔</span>
+    </div>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features">
+  <div class="container features-grid">
+    <div class="feature">
+      <div class="feature-icon">✅</div>
+      <h3>100% Халяль</h3>
+      <p>Сертифицированные продукты</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">⚡</div>
+      <h3>Доставка 30 мин</h3>
+      <p>Через приложение или WhatsApp</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">👨‍🍳</div>
+      <h3>Премиум класс</h3>
+      <p>Свежие ингредиенты каждый день</p>
+    </div>
+    <div class="feature">
+      <div class="feature-icon">🌍</div>
+      <h3>4 кухни мира</h3>
+      <p>Бургеры, Турция, Европа, Италия</p>
+    </div>
+  </div>
+</section>
+
+<!-- MENU -->
+<section class="menu-section" id="menu">
+  <div class="container">
+    <div class="section-head">
+      <h2>Наше меню</h2>
+      <p>Найдите любимое блюдо и добавьте в корзину</p>
+    </div>
+
+    <div class="menu-search">
+      <input
+        type="search"
+        class="menu-search-input"
+        id="menuSearch"
+        placeholder="Поиск по меню: бургер, донер, пицца…"
+        autocomplete="off"
+        aria-label="Поиск по меню"
+      >
+      <svg class="menu-search-icon" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+        <path d="M15.5 14h-.79l-.28-.27a6.5 6.5 0 001.48-5.34c-.47-2.78-2.79-5-5.59-5.34a6.505 6.505 0 00-7.27 7.27c.34 2.8 2.56 5.12 5.34 5.59a6.5 6.5 0 005.34-1.48l.27.28v.79l4.25 4.25c.41.41 1.08.41 1.49 0 .41-.41.41-1.08 0-1.49L15.5 14zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+      </svg>
+      <button class="menu-search-clear" id="menuSearchClear" aria-label="Очистить поиск" type="button">✕</button>
+    </div>
+
+    <div class="menu-tabs" id="menuTabs"></div>
+    <div class="menu-grid" id="menuGrid"></div>
+  </div>
+</section>
+
+<!-- APP CTA -->
+<section class="app-cta" id="app">
+  <div class="container app-cta-inner">
+    <div>
+      <h2>Заказывайте удобным способом</h2>
+      <p>Через приложение — быстрее и со скидками. Через WhatsApp — если не хотите ставить приложение. Instagram — чтобы следить за новинками.</p>
+      <div class="store-buttons">
+        <a href="https://apps.apple.com/app/id6756871159" class="store-btn" target="_blank" rel="noopener">
+          <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.12-2.79-1.5-4.67-6.36-4.67-10.39 0-3.7 2.4-5.66 4.76-5.66 1.2 0 2.33.4 3.05.83.72.43 1.35.43 2.07 0 .72-.43 1.85-.83 3.05-.83 2.36 0 4.76 1.96 4.76 5.66 0 4.03-1.88 8.89-4.67 10.39-.86.56-1.62.74-3.06.12-1.15-.48-2.15-.46-3.24 0-1.03.45-2.1.6-3.08-.35zM12.03 5.39c-.1-2.13 1.53-3.94 3.55-4.09.28 2.3-1.9 4.13-3.55 4.09z"/>
+          </svg>
+          <span class="store-text">
+            <small>Скачать в</small>
+            <strong>App Store</strong>
+          </span>
+        </a>
+        <a href="https://api.whatsapp.com/send/?phone=996501909909&text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B8%D0%B7+%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81+%D0%9A%D0%B0%D1%80%D1%82%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9C%D0%B5%D0%BD%D1%8F+%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%BE+%D0%B2%D0%B0%D1%88%D0%B5+%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5&type=phone_number&app_absent=0" class="store-btn wa" target="_blank" rel="noopener">
+          <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+          </svg>
+          <span class="store-text">
+            <small>Заказать в</small>
+            <strong>WhatsApp</strong>
+          </span>
+        </a>
+        <a href="https://www.instagram.com/iloveburger_kg" class="store-btn ig" target="_blank" rel="noopener">
+          <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+          </svg>
+          <span class="store-text">
+            <small>Подписаться в</small>
+            <strong>Instagram</strong>
+          </span>
+        </a>
+      </div>
+    </div>
+    <div class="app-visual"><span>📱</span></div>
+  </div>
+</section>
+
+<!-- CONTACTS + MAP -->
+<section class="contacts" id="contacts">
+  <div class="container">
+    <div class="section-head">
+      <h2>Как нас найти</h2>
+      <p>Ждём вас каждый день с 10:00 до 23:00</p>
+    </div>
+    <div class="contacts-grid">
+      <div class="contact-info">
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Адрес</h4>
+            <p>г. Манас, ул. Тумонбая Байзакова 63</p>
+          </div>
+        </div>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Телефоны</h4>
+            <div class="contact-lines">
+              <a href="tel:+996990142123">+996 990 14 21 23</a>
+              <a href="tel:+996551909909">+996 551 90 99 09</a>
+            </div>
+          </div>
+        </div>
+        <a href="https://api.whatsapp.com/send/?phone=996501909909&text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B8%D0%B7+%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81+%D0%9A%D0%B0%D1%80%D1%82%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9C%D0%B5%D0%BD%D1%8F+%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%BE+%D0%B2%D0%B0%D1%88%D0%B5+%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-icon wa-hover">
+            <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>WhatsApp</h4>
+            <p>Заказать в WhatsApp</p>
+          </div>
+        </a>
+        <a href="https://www.instagram.com/iloveburger_kg" target="_blank" rel="noopener" class="contact-item">
+          <div class="contact-icon ig-hover">
+            <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Instagram</h4>
+            <p>@iloveburger_kg</p>
+          </div>
+        </a>
+        <div class="contact-item">
+          <div class="contact-icon">
+            <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+              <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm.5 5v5.25l4.5 2.67-.75 1.23L11 13V7h1.5z"/>
+            </svg>
+          </div>
+          <div>
+            <h4>Часы работы</h4>
+            <p>Ежедневно 10:00 — 23:00</p>
+          </div>
+        </div>
+      </div>
+      <div class="map-wrapper">
+        <iframe
+          src="https://maps.2gis.com/widget?type=firmsonmap&object_id=YOUR_ORG_ID"
+          loading="lazy"
+          title="I Love Burger на карте">
+        </iframe>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="socials">
+      <a href="https://www.instagram.com/iloveburger_kg" target="_blank" rel="noopener" class="ig" aria-label="Instagram">
+        <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/>
+        </svg>
+      </a>
+      <a href="https://api.whatsapp.com/send/?phone=996501909909&text=%D0%9E%D0%B1%D1%80%D0%B0%D1%89%D0%B5%D0%BD%D0%B8%D0%B5+%D0%B8%D0%B7+%D0%AF%D0%BD%D0%B4%D0%B5%D0%BA%D1%81+%D0%9A%D0%B0%D1%80%D1%82%0A%D0%97%D0%B4%D1%80%D0%B0%D0%B2%D1%81%D1%82%D0%B2%D1%83%D0%B9%D1%82%D0%B5%21+%D0%9C%D0%B5%D0%BD%D1%8F+%D0%B7%D0%B0%D0%B8%D0%BD%D1%82%D0%B5%D1%80%D0%B5%D1%81%D0%BE%D0%B2%D0%B0%D0%BB%D0%BE+%D0%B2%D0%B0%D1%88%D0%B5+%D0%BF%D1%80%D0%B5%D0%B4%D0%BB%D0%BE%D0%B6%D0%B5%D0%BD%D0%B8%D0%B5&type=phone_number&app_absent=0" target="_blank" rel="noopener" class="wa" aria-label="WhatsApp">
+        <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+      </a>
+      <a href="tel:+996990142123" aria-label="Позвонить">
+        <svg class="icon-svg" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+        </svg>
+      </a>
+    </div>
+    <p>© 2026 I Love Burger. Все права защищены.</p>
+    <p style="margin-top:8px">г. Манас, ул. Тумонбая Байзакова 63 · +996 990 14 21 23 · +996 551 90 99 09</p>
+  </div>
+</footer>
+
+<!-- FAB Корзина -->
+<button class="fab" id="fabCart" aria-label="Корзина">🛒</button>
+
+<!-- TOAST -->
+<div class="toast" id="toast"></div>
+
+<script>
+/* ============================================================
+   МОКОВЫЕ ДАННЫЕ МЕНЮ
+   ============================================================ */
+const MENU_DATA = [
+  { id:'b1', category:'burgers', name:'I Love Burger', desc:'Двойная котлета, чеддер, соус', price:350, emoji:'🍔', tags:['hit'] },
+  { id:'b2', category:'burgers', name:'Cheese Burger', desc:'Классика с чеддером', price:290, emoji:'🧀', tags:['halal'] },
+  { id:'b3', category:'burgers', name:'Chicken Burger', desc:'Куриное филе, салат, майонез', price:270, emoji:'🍗', tags:[] },
+  { id:'b4', category:'burgers', name:'Double Burger', desc:'Две котлеты, бекон, сыр', price:420, emoji:'🍔', tags:['new'] },
+  { id:'t1', category:'turkish', name:'Донер', desc:'Классический турецкий донер', price:250, emoji:'🌯', tags:['halal'] },
+  { id:'t2', category:'turkish', name:'Шаурма', desc:'С курицей и овощами', price:220, emoji:'🌯', tags:[] },
+  { id:'t3', category:'turkish', name:'Лахмаджун', desc:'Турецкая пицца с мясом', price:280, emoji:'🫓', tags:[] },
+  { id:'t4', category:'turkish', name:'Адана Кебаб', desc:'Острый кебаб на гриле', price:380, emoji:'🍢', tags:['spicy'] },
+  { id:'e1', category:'european', name:'Стейк из курицы', desc:'С гарниром на выбор', price:420, emoji:'🍖', tags:[] },
+  { id:'e2', category:'european', name:'Картофель фри', desc:'Хрустящий, с соусом', price:120, emoji:'🍟', tags:[] },
+  { id:'e3', category:'european', name:'Наггетсы', desc:'6 шт, с соусом', price:180, emoji:'🍗', tags:[] },
+  { id:'i1', category:'italian', name:'Пицца Маргарита', desc:'Томат, моцарелла, базилик', price:450, emoji:'🍕', tags:[] },
+  { id:'i2', category:'italian', name:'Пицца Пепперони', desc:'Пепперони, сыр', price:480, emoji:'🍕', tags:['spicy'] },
+  { id:'i3', category:'italian', name:'Паста Карбонара', desc:'С беконом и сливками', price:380, emoji:'🍝', tags:[] },
+  { id:'d1', category:'drinks', name:'Кола', desc:'0.5 л', price:80, emoji:'🥤', tags:[] },
+  { id:'d2', category:'drinks', name:'Айран', desc:'0.3 л', price:60, emoji:'🥛', tags:['halal'] },
+  { id:'d3', category:'drinks', name:'Чай', desc:'Горячий, с сахаром', price:50, emoji:'🍵', tags:[] },
+];
+
+const CATEGORIES = [
+  { id:'all', name:'Всё' },
+  { id:'burgers', name:'Бургеры' },
+  { id:'turkish', name:'Турецкая' },
+  { id:'european', name:'Европейская' },
+  { id:'italian', name:'Итальянская' },
+  { id:'drinks', name:'Напитки' },
+];
+
+const state = {
+  activeCategory:'all',
+  searchQuery:'',
+  cart:[],
+  favorites:[]
+};
+
+/* ============================================================
+   УТИЛИТА: экранирование HTML и подсветка совпадений
+   ============================================================ */
+function escapeHtml(str){
+  return String(str).replace(/[&<>"']/g, s => ({
+    '&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'
+  }[s]));
+}
+
+function highlight(text, query){
+  const safe = escapeHtml(text);
+  if (!query) return safe;
+  const q = query.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  const re = new RegExp(`(${q})`, 'gi');
+  return safe.replace(re, '<mark>$1</mark>');
+}
+
+/* ============================================================
+   ПОИСК
+   ============================================================ */
+function matchesQuery(item, q){
+  if (!q) return true;
+  const norm = s => s.toLowerCase().trim();
+  const query = norm(q);
+  const haystack = [
+    item.name,
+    item.desc,
+    item.category,
+    ...(item.tags || [])
+  ].map(norm).join(' ');
+  return haystack.includes(query);
+}
+
+/* ============================================================
+   РЕНДЕР ТАБОВ
+   ============================================================ */
+function renderTabs(){
+  const el = document.getElementById('menuTabs');
+  el.innerHTML = CATEGORIES.map(c =>
+    `<button class="tab${c.id === state.activeCategory ? ' active' : ''}" data-cat="${c.id}">${c.name}</button>`
+  ).join('');
+  el.querySelectorAll('.tab').forEach(btn => {
+    btn.addEventListener('click', () => {
+      state.activeCategory = btn.dataset.cat;
+      renderTabs();
+      renderMenu();
+    });
+  });
+}
+
+/* ============================================================
+   РЕНДЕР МЕНЮ
+   ============================================================ */
+function renderMenu(){
+  const grid = document.getElementById('menuGrid');
+  const q = state.searchQuery.trim();
+
+  let items = MENU_DATA;
+
+  // Если есть поиск — ищем по всему меню, игнорируя активную категорию
+  if (q) {
+    items = items.filter(item => matchesQuery(item, q));
+  } else if (state.activeCategory !== 'all') {
+    items = items.filter(i => i.category === state.activeCategory);
+  }
+
+  if (!items.length){
+    grid.innerHTML = `
+      <div class="menu-empty">
+        <strong>Ничего не найдено</strong>
+        Попробуйте изменить запрос или выберите другую категорию
+      </div>
+    `;
+    return;
+  }
+
+  grid.innerHTML = items.map(item => {
+    const isFav = state.favorites.includes(item.id);
+    const tagHtml = item.tags.includes('hit') ? '<span class="menu-card-tag">Хит</span>'
+      : item.tags.includes('new') ? '<span class="menu-card-tag">Новинка</span>'
+      : item.tags.includes('halal') ? '<span class="menu-card-tag halal">Халяль</span>'
+      : item.tags.includes('spicy') ? '<span class="menu-card-tag">Острое</span>'
+      : '';
+
+    return `
+      <article class="menu-card" data-id="${item.id}">
+        <div class="menu-card-img">
+          ${tagHtml}
+          <button class="fav-btn${isFav ? ' active' : ''}" data-fav="${item.id}" aria-label="В избранное">
+            ${isFav ? '♥' : '♡'}
+          </button>
+          <span>${item.emoji}</span>
+        </div>
+        <div class="menu-card-body">
+          <h3>${highlight(item.name, q)}</h3>
+          <p>${highlight(item.desc, q)}</p>
+          <div class="menu-card-footer">
+            <div class="menu-card-price">${item.price} <small>сом</small></div>
+            <button class="add-btn" data-add="${item.id}" aria-label="В корзину">+</button>
+          </div>
+        </div>
+      </article>
+    `;
+  }).join('');
+
+  grid.querySelectorAll('[data-add]').forEach(btn =>
+    btn.addEventListener('click', e => { e.stopPropagation(); addToCart(btn.dataset.add); })
+  );
+  grid.querySelectorAll('[data-fav]').forEach(btn =>
+    btn.addEventListener('click', e => { e.stopPropagation(); toggleFav(btn.dataset.fav); })
+  );
+}
+
+/* ============================================================
+   КОРЗИНА
+   ============================================================ */
+function addToCart(id){
+  const existing = state.cart.find(i => i.id === id);
+  if (existing) existing.qty++;
+  else state.cart.push({ id, qty:1 });
+  updateCartBadge();
+  showToast(`Добавлено: ${MENU_DATA.find(i => i.id === id).name}`);
+}
+
+function updateCartBadge(){
+  const count = state.cart.reduce((s,i) => s + i.qty, 0);
+  const badge = document.getElementById('cartCount');
+  badge.textContent = count;
+  badge.style.display = count > 0 ? 'flex' : 'none';
+}
+
+/* ============================================================
+   ИЗБРАННОЕ
+   ============================================================ */
+function toggleFav(id){
+  const idx = state.favorites.indexOf(id);
+  if (idx === -1) state.favorites.push(id);
+  else state.favorites.splice(idx, 1);
+  updateFavBadge();
+  renderMenu();
+}
+
+function updateFavBadge(){
+  const badge = document.getElementById('favCount');
+  badge.textContent = state.favorites.length;
+  badge.style.display = state.favorites.length > 0 ? 'flex' : 'none';
+}
+
+/* ============================================================
+   TOAST
+   ============================================================ */
+let toastTimer;
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg;
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 2000);
+}
+
+/* ============================================================
+   ПОИСК: обработчики
+   ============================================================ */
+const searchInput = document.getElementById('menuSearch');
+const searchClear = document.getElementById('menuSearchClear');
+
+let searchDebounce;
+searchInput.addEventListener('input', e => {
+  state.searchQuery = e.target.value;
+  searchClear.classList.toggle('visible', state.searchQuery.length > 0);
+
+  clearTimeout(searchDebounce);
+  searchDebounce = setTimeout(() => {
+    renderMenu();
+  }, 120);
+});
+
+searchClear.addEventListener('click', () => {
+  searchInput.value = '';
+  state.searchQuery = '';
+  searchClear.classList.remove('visible');
+  renderMenu();
+  searchInput.focus();
+});
+
+/* ============================================================
+   HEADER: усиление тени при скролле
+   ============================================================ */
+const headerEl = document.getElementById('siteHeader');
+window.addEventListener('scroll', () => {
+  if (window.scrollY > 20) headerEl.classList.add('scrolled');
+  else headerEl.classList.remove('scrolled');
+}, { passive: true });
+
+/* ============================================================
+   INIT
+   ============================================================ */
+renderTabs();
+renderMenu();
+updateCartBadge();
+updateFavBadge();
+
+document.getElementById('cartBtn').addEventListener('click', () => {
+  showToast(state.cart.length ? `В корзине: ${state.cart.reduce((s,i)=>s+i.qty,0)} шт` : 'Корзина пуста');
+});
+document.getElementById('favBtn').addEventListener('click', () => {
+  showToast(state.favorites.length ? `В избранном: ${state.favorites.length}` : 'Избранное пусто');
+});
+document.getElementById('fabCart').addEventListener('click', () => {
+  showToast(state.cart.length ? `В корзине: ${state.cart.reduce((s,i)=>s+i.qty,0)} шт` : 'Корзина пуста');
+});
+</script>
+
+</body>
+</html>

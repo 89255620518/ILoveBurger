@@ -2,6 +2,32 @@
 <html lang="ru">
 <head>
 <meta charset="UTF-8">
+
+<!-- ============================================================
+     YANDEX.METRIKA COUNTER
+     ============================================================ -->
+<script type="text/javascript">
+    (function(m,e,t,r,i,k,a){
+        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=112918813', 'ym');
+
+    ym(112918813, 'init', {
+        ssr:false,
+        webvisor:true,
+        clickmap:true,
+        ecommerce:"dataLayer",
+        referrer: document.referrer,
+        url: location.href,
+        accurateTrackBounce:true,
+        trackLinks:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/112918813" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 
@@ -88,6 +114,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="dns-prefetch" href="https://yandex.ru">
 <link rel="dns-prefetch" href="https://apps.apple.com">
+<link rel="dns-prefetch" href="https://mc.yandex.ru">
 
 <!-- ============================================================
      HREFLANG (только существующие версии)
@@ -1477,11 +1504,67 @@ function highlight(text, query){
 }
 
 /* ============================================================
+   YANDEX METRIKA — ECOMMERCE И ЦЕЛИ
+   ============================================================ */
+const YM_COUNTER_ID = 112918813;
+
+function ymGoal(goal, params){
+  if (typeof ym !== 'function') return;
+  try {
+    ym(YM_COUNTER_ID, 'reachGoal', goal, params);
+  } catch (e) { /* silent */ }
+  if (params && params.ecommerce){
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({ ecommerce: null });
+    window.dataLayer.push(params);
+  }
+}
+
+function trackAddToCart(item){
+  ymGoal('add_to_cart', {
+    ecommerce: {
+      currencyCode: 'KGS',
+      add: {
+        products: [{
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          category: item.category,
+          quantity: 1
+        }]
+      }
+    }
+  });
+}
+
+function trackAddToWishlist(item){
+  ymGoal('add_to_wishlist', {
+    ecommerce: {
+      currencyCode: 'KGS',
+      add: {
+        products: [{
+          id: item.id,
+          name: item.name,
+          price: item.price,
+          category: item.category,
+          quantity: 1
+        }]
+      }
+    }
+  });
+}
+
+function trackSearch(query){
+  if (!query) return;
+  ymGoal('menu_search', { searchQuery: query });
+}
+
+/* ============================================================
    ПОИСК
    ============================================================ */
 function matchesQuery(item, q){
   if (!q) return true;
-  const norm = s => s.toLowerCase().trim();
+  const norm = s => String(s).toLowerCase().trim();
   const query = norm(q);
   const haystack = [
     item.name,
@@ -1578,11 +1661,14 @@ function renderMenu(){
    КОРЗИНА
    ============================================================ */
 function addToCart(id){
+  const item = MENU_DATA.find(i => i.id === id);
+  if (!item) return;
   const existing = state.cart.find(i => i.id === id);
   if (existing) existing.qty++;
   else state.cart.push({ id, qty:1 });
   updateCartBadge();
-  showToast(`Добавлено: ${MENU_DATA.find(i => i.id === id).name}`);
+  showToast(`Добавлено: ${item.name}`);
+  trackAddToCart(item);
 }
 
 function updateCartBadge(){
@@ -1596,9 +1682,14 @@ function updateCartBadge(){
    ИЗБРАННОЕ
    ============================================================ */
 function toggleFav(id){
+  const item = MENU_DATA.find(i => i.id === id);
   const idx = state.favorites.indexOf(id);
-  if (idx === -1) state.favorites.push(id);
-  else state.favorites.splice(idx, 1);
+  if (idx === -1){
+    state.favorites.push(id);
+    if (item) trackAddToWishlist(item);
+  } else {
+    state.favorites.splice(idx, 1);
+  }
   updateFavBadge();
   renderMenu();
 }
@@ -1628,6 +1719,7 @@ const searchInput = document.getElementById('menuSearch');
 const searchClear = document.getElementById('menuSearchClear');
 
 let searchDebounce;
+let lastTrackedQuery = '';
 searchInput.addEventListener('input', e => {
   state.searchQuery = e.target.value;
   searchClear.classList.toggle('visible', state.searchQuery.length > 0);
@@ -1635,7 +1727,12 @@ searchInput.addEventListener('input', e => {
   clearTimeout(searchDebounce);
   searchDebounce = setTimeout(() => {
     renderMenu();
-  }, 120);
+    const q = state.searchQuery.trim();
+    if (q.length >= 3 && q !== lastTrackedQuery){
+      lastTrackedQuery = q;
+      trackSearch(q);
+    }
+  }, 350);
 });
 
 searchClear.addEventListener('click', () => {
@@ -1664,14 +1761,66 @@ updateCartBadge();
 updateFavBadge();
 
 document.getElementById('cartBtn').addEventListener('click', () => {
-  showToast(state.cart.length ? `В корзине: ${state.cart.reduce((s,i)=>s+i.qty,0)} шт` : 'Корзина пуста');
+  const total = state.cart.reduce((s,i)=>s+i.qty,0);
+  showToast(state.cart.length ? `В корзине: ${total} шт` : 'Корзина пуста');
+  ymGoal('open_cart');
 });
 document.getElementById('favBtn').addEventListener('click', () => {
   showToast(state.favorites.length ? `В избранном: ${state.favorites.length}` : 'Избранное пусто');
+  ymGoal('open_wishlist');
 });
 document.getElementById('fabCart').addEventListener('click', () => {
-  showToast(state.cart.length ? `В корзине: ${state.cart.reduce((s,i)=>s+i.qty,0)} шт` : 'Корзина пуста');
+  const total = state.cart.reduce((s,i)=>s+i.qty,0);
+  showToast(state.cart.length ? `В корзине: ${total} шт` : 'Корзина пуста');
+  ymGoal('open_cart');
 });
+
+/* ============================================================
+   МЕТРИКА: клики по контактным ссылкам
+   ============================================================ */
+document.addEventListener('click', (e) => {
+  const link = e.target.closest('a[href]');
+  if (!link) return;
+  const href = link.getAttribute('href') || '';
+
+  if (href.includes('wa.me') || href.includes('whatsapp.com')){
+    ymGoal('click_whatsapp');
+  } else if (href.includes('instagram.com')){
+    ymGoal('click_instagram');
+  } else if (href.startsWith('tel:')){
+    ymGoal('click_phone');
+  } else if (href.includes('apps.apple.com')){
+    ymGoal('click_app_store');
+  }
+}, { passive: true });
+
+/* ============================================================
+   МЕТРИКА: отслеживание скролла до секций
+   ============================================================ */
+(function trackSections(){
+  if (!('IntersectionObserver' in window)) return;
+  const sections = [
+    { id:'menu', goal:'view_menu' },
+    { id:'app', goal:'view_app_cta' },
+    { id:'contacts', goal:'view_contacts' },
+    { id:'faq', goal:'view_faq' }
+  ];
+  const seen = new Set();
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting && !seen.has(entry.target.id)){
+        seen.add(entry.target.id);
+        const s = sections.find(x => x.id === entry.target.id);
+        if (s) ymGoal(s.goal);
+      }
+    });
+  }, { threshold: 0.4 });
+
+  sections.forEach(s => {
+    const el = document.getElementById(s.id);
+    if (el) observer.observe(el);
+  });
+})();
 </script>
 
 </body>
